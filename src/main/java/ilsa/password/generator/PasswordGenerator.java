@@ -20,18 +20,6 @@ public class PasswordGenerator {
 		createPassword();
 	}
 
-	private void createPassword() {
-		for (int i = 0; i < password.getLength(); i++) {
-			addChar(i);
-
-			System.out.printf("Index %d is: %d\n", i, password.getPassword().get(i));
-		}
-//		System.out.println(password.toHexString());
-		
-	}
-
-	
-	
 	private void addChar(int indexToAdd) {
 		int duplicate = 0;
 		boolean generateSame = false;
@@ -97,6 +85,18 @@ public class PasswordGenerator {
 
 		}
 
+	}
+
+	
+	
+	private void createPassword() {
+		for (int i = 0; i < password.getLength(); i++) {
+			addChar(i);
+
+			System.out.printf("Index %d is: %d\n", i, password.getPassword().get(i));
+		}
+//		System.out.println(password.toHexString());
+		
 	}
 
 }
